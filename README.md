@@ -8,6 +8,10 @@ The basic Apache Airflow setup (with `dag-factory`)
 
 Step by step (OSX):
 ```
+# set locales for python
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # install python3
 brew install python3
 
