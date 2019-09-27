@@ -34,8 +34,7 @@ export AIRFLOW_HOME=$(pwd)/airflow
 airflow initdb
 
 # disable examples
-sed -i sed 's/.*load_examples = True.*/load_examples = False/' airflow/airflow.cfg
-rm -f airflow/airflow.cfgsed
+sed -i '' -e 's/.*load_examples = True.*/load_examples = False/' airflow/airflow.cfg
 airflow resetdb -y
 
 # start the web server, default port is 8080

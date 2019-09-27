@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# airflow
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/logs/
+airflow/unittests.cfg
