@@ -41,6 +41,16 @@ airflow webserver -p 8080 &
 airflow scheduler
 
 # visit localhost:8080 in the browser and enable the example dag in the home page
-# ctrl-c to kill scheduler
-# fg to return web from foreground and ctrl-c to kill web
+
+# kill the scheduler
+# ctrl-c
+
+# return the web from foreground
+fg
+
+# kill the web
+# ctrl-c
+
+# exit virtualenv
+deactivate
 ```
