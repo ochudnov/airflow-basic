@@ -1,0 +1,20 @@
+create_user_dag:
+  default_args:
+    owner: 'example_owner'
+    start_date: 2019-01-01
+    params:
+      prefix: my_project_1
+  schedule_interval: '* * * * *'
+  description: 'Creates new random user with address every 5 minutes'
+  tasks:
+    create_user:
+      operator: airflow.operators.sqlite_operator.SqliteOperator
+      sql: sql/create_user.sql
+    get_user_id:
+      operator: airflow.operators.example_plugin.GetResultSqliteOperator
+      sql: sql/select_user_id.sql
+      dependencies: [create_user]
+    create_address:
+      operator: airflow.operators.sqlite_operator.SqliteOperator
+      sql: sql/create_address.sql
+      dependencies: [get_user_id]

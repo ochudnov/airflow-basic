@@ -1,0 +1,18 @@
+create_tables_dag:
+  default_args:
+    owner: 'example_owner'
+    start_date: 2019-01-01
+  schedule_interval: null
+  description: 'This is a utility DAG w/o schedule for running DDLs'
+  tasks:
+    create_users_table:
+      operator: airflow.operators.sqlite_operator.SqliteOperator
+      sql: sql/ddl/create_users_table.sql
+      params:
+        prefix: my_project_1
+    create_addresses_table:
+      operator: airflow.operators.sqlite_operator.SqliteOperator
+      sql: sql/ddl/create_addresses_table.sql
+      params:
+        prefix: my_project_1
+      dependencies: [create_users_table]
