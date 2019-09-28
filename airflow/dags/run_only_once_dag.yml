@@ -1,0 +1,10 @@
+single_run_dag:
+  default_args:
+    owner: 'example_owner'
+    start_date: 2019-01-01
+  schedule_interval: '* * * * *'
+  description: 'Example of single DAG run. Runs once per minute.'
+  tasks:
+    2_minutes_run_task:
+      operator: airflow.operators.bash_operator.BashOperator
+      bash_command: 'sleep 2m'
