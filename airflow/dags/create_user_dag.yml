@@ -4,7 +4,7 @@ create_user_dag:
     start_date: 2019-01-01
     params:
       prefix: my_project_1
-  schedule_interval: '* * * * *'
+  schedule_interval: '*/5 * * * *'
   description: 'Creates new random user with address every 5 minutes'
   tasks:
     create_user:

@@ -1,12 +1,20 @@
 # airflow-basic
 The basic Apache Airflow setup (with `dag-factory`)
 
-## Airflow quick install
+## Examples list
+- `airflow/dags/create_tables_dag.yml` - utility DAG example
+for creation tables. Has no schedule, should be triggered manually.
+- `airflow/dags/create_user_dag.yml` - [XComs](https://airflow.apache.org/concepts.html#xcoms)
+example. [Plugins](https://airflow.apache.org/plugins.html) example.
+- `airflow/plugins/example_plugin.py` - an operator for retriving data from
+SQLite DB.
+
+## Installation
 [Airflow official docs](https://airflow.apache.org/start.html)
 
 [dag-factory PyPI page](https://pypi.org/project/dag-factory/)
 
-Step by step (OSX):
+Installation for OSX:
 ```
 # set locales for python
 export LC_ALL=en_US.UTF-8
