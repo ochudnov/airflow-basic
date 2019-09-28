@@ -3,6 +3,7 @@ single_run_dag:
     owner: 'example_owner'
     start_date: 2019-01-01
   schedule_interval: '* * * * *'
+  max_active_runs: 1
   description: 'Example of single DAG run. Runs once per minute.'
   tasks:
     2_minutes_run_task:

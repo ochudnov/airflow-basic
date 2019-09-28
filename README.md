@@ -2,10 +2,14 @@
 The basic Apache Airflow setup (with `dag-factory`)
 
 ## Examples list
+DAGs
 - `airflow/dags/create_tables_dag.yml` - utility DAG example
 for creation tables. Has no schedule, should be triggered manually.
 - `airflow/dags/create_user_dag.yml` - [XComs](https://airflow.apache.org/concepts.html#xcoms)
 example. [Plugins](https://airflow.apache.org/plugins.html) example.
+- `airflow/dags/run_only_once_dag.yml` - example for `max_active_runs`.
+
+Plugins
 - `airflow/plugins/example_plugin.py` - an operator for retriving data from
 SQLite DB.
 
