@@ -8,6 +8,8 @@ for creation tables. Has no schedule, should be triggered manually.
 - `airflow/dags/create_user_dag.yml` - [XComs](https://airflow.apache.org/concepts.html#xcoms)
 example. [Plugins](https://airflow.apache.org/plugins.html) example.
 - `airflow/dags/run_only_once_dag.yml` - example for `max_active_runs`.
+- `airflow/dags/subdag_example_dag.py` - example of entryoint for `SubDagOperator` example
+- `airflow/dags/subdags/*.yml` - example subdags
 
 Plugins
 - `airflow/plugins/example_plugin.py` - an operator for retriving data from
