@@ -1,0 +1,13 @@
+subdag_2:
+  default_args:
+    owner: 'example_owner'
+    start_date: 2019-01-01
+  schedule_interval: '* * * * *'
+  description: 'Subdag 2'
+  tasks:
+    step1:
+      operator: airflow.operators.bash_operator.BashOperator
+      bash_command: 'echo "step 1"'
+    step2:
+      operator: airflow.operators.bash_operator.BashOperator
+      bash_command: 'echo "step 2"'

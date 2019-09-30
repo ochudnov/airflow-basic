@@ -1,0 +1,11 @@
+subdag_1:
+  default_args:
+    owner: 'example_owner'
+    start_date: 2019-01-01
+  schedule_interval: '* * * * *'
+  max_active_runs: 1
+  description: 'Subdag 1'
+  tasks:
+    2_minutes_run_task:
+      operator: airflow.operators.bash_operator.BashOperator
+      bash_command: 'sleep 2m'
